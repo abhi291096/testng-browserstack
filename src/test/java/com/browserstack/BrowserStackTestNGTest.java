@@ -83,11 +83,11 @@ public class BrowserStackTestNGTest {
                 new URL("http://" + username + ":" + accessKey + "@" + config.get("server") + "/wd/hub"), capabilities);
     }
 
-//     @AfterMethod(alwaysRun = true)
-//     public void tearDown() throws Exception {
-//         driver.quit();
-// //         if (l != null) {
-// //             l.stop();
-// //         }
-//     }
+    @AfterMethod(alwaysRun = true)
+    public void tearDown() throws Exception {
+        driver.quit();
+//         if (l != null) {
+//             l.stop();
+//         }
+    }
 }

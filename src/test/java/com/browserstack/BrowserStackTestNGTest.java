@@ -61,8 +61,8 @@ public class BrowserStackTestNGTest {
         String browserstackLocal = System.getenv("BROWSERSTACK_LOCAL");
         String browserstackLocalIdentifier = System.getenv("BROWSERSTACK_LOCAL_IDENTIFIER");
         
-        caps.setCapability("browserstack.local",browserstackLocal);
-        caps.setCapability("browserstack.localIdentifier",browserstackLocalIdentifier);
+        capabilities.setCapability("browserstack.local",browserstackLocal);
+        capabilities.setCapability("browserstack.localIdentifier",browserstackLocalIdentifier);
 
 
 //         if (capabilities.getCapability("browserstack.local") != null

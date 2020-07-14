@@ -36,6 +36,8 @@ public class BrowserStackTestNGTest {
             Map.Entry pair = (Map.Entry) it.next();
             capabilities.setCapability(pair.getKey().toString(), pair.getValue().toString());
         }
+        
+        
 
         Map<String, String> commonCapabilities = (Map<String, String>) config.get("capabilities");
         it = commonCapabilities.entrySet().iterator();
@@ -45,16 +47,20 @@ public class BrowserStackTestNGTest {
                 capabilities.setCapability(pair.getKey().toString(), pair.getValue().toString());
             }
         }
+        
+        System.out.println("reached here, now proceeding ahead");
+        
+        
 
         String username = System.getenv("BROWSERSTACK_USERNAME");
-        if (username == null) {
-            username = (String) config.get("user");
-        }
+//         if (username == null) {
+//             username = (String) config.get("user");
+//         }
 
         String accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
-        if (accessKey == null) {
-            accessKey = (String) config.get("key");
-        }
+//         if (accessKey == null) {
+//             accessKey = (String) config.get("key");
+//         }
         
 //          username = System.getenv("BROWSERSTACK_USERNAME");
 //          accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");

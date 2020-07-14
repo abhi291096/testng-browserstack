@@ -1,3 +1,8 @@
+var username = process.env.BROWSERSTACK_USER
+var accessKey = process.env.BROWSERSTACK_ACCESSKEY
+var browserstackLocal = process.env.BROWSERSTACK_LOCAL
+var browserstackLocalIdentifier = process.env.BROWSERSTACK_LOCAL_IDENTIFIER
+
 {
   "server": "hub-cloud.browserstack.com",
   "user": "BROWSERSTACK_USERNAME",
@@ -5,8 +10,12 @@
 
   "capabilities": {
     "build": "testng-browserstack",
-    "name": "single_test",
-    "browserstack.debug": true
+    "name": "single_test_with_local",
+    "browserstack.debug": true,
+    "browserstack.local": browserstackLocal,
+    "browserstack.localIdentifier": browserstackLocalIdentifier,
+    "build": "AM_Java"
+    
   },
 
   "environments": {
